@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
@@ -22,16 +22,26 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import { getCurrentUser } from './Firebase';
+import Chat from './pages/Chat';
+import { AuthContextProvider } from './context/AuthContext';
 
-const App: React.FC = () => (
+let content;
+const App: React.FC = () => {
+   
+  return(
+  <AuthContextProvider>
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
         <Route path="/home" component={Home} exact={true} />
+        <Route path="/chat" component={Chat} exact={true} />
         <Route exact path="/" render={() => <Redirect to="/home" />} />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
-);
+  </AuthContextProvider>
+  )
+};
 
 export default App;
