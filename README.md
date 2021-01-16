@@ -14,3 +14,5 @@ La función de login importa la función de autenticación especificada en Fireb
 8. Con el botón llamamos a la función enviarMensaje,  que recoge los datos necesarios (usuario y texto), enviamos el usuario autehticado y el valor de la variable texto, es decir el mensaje. 
 9. Debajo de la caja de texto, tenemos el elemento para subir imagenes, este elemento llama a la función subir. 
 10. En la función subir obtenemos el archivo enviado,apuntamos hacia nuestro Storage y guardamos la imagen. 
+
+Link video: https://drive.google.com/file/d/1zqq4uBPb_Ju0dvdAjrqUDcFCcLI_F7vn/view?usp=sharing 
